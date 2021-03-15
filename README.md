@@ -142,3 +142,35 @@ class ExcelsTest {
 ```
 
 ![excel generate](static/images/excel.generate.png)
+
+##   
+
+因Maven发布存在延迟，若从Maven中心下载不到，可添加以下配置从OSS仓库下载：
+
+```xml
+
+<repositories>
+    <repository>
+        <id>oss</id>
+        <name>oss-releases</name>
+        <url>https://oss.sonatype.org/content/repositories/releases/</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </repository>
+    <repository>
+        <id>oss-snapshots</id>
+        <name>oss-snapshots</name>
+        <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        <releases>
+            <enabled>false</enabled>
+        </releases>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+    </repository>
+</repositories>
+```
