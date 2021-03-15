@@ -10,6 +10,13 @@
 
 Simple excel generate tool
 
+## Feature
+
+* 动态列
+* 表达式，支持Excel原生函数
+* 多级表头或表尾
+* 自定义样式，如背景颜色、字体等
+
 ## Usage
 
 ### Import Dependency
