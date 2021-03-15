@@ -20,6 +20,8 @@ jobs:
           java-version: 1.8
       - name: Test with Maven
         run: mvn test
+      - name: cobertura
+        run: mvn cobertura:cobertura
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       - name: Codecov
