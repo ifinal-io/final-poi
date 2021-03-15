@@ -143,7 +143,7 @@ class ExcelsTest {
 
 ![excel generate](static/images/excel.generate.png)
 
-##   
+## Maven Repositories
 
 因Maven发布存在延迟，若从Maven中心下载不到，可添加以下配置从OSS仓库下载：
 
