@@ -11,10 +11,10 @@ import org.junit.jupiter.api.Test;
  * @version 1.0.0
  * @since 1.0.0
  */
-public class ColorsTest {
+class ColorsTest {
 
     @Test
-    public void decode() {
+    void decode() {
 
         assertEquals(255, Colors.decode("RED").getRed());
 
