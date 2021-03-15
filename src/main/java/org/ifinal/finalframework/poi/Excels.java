@@ -38,8 +38,6 @@ public final class Excels {
         Sheet sheet = new Sheet();
         sheet.setName(sheetName);
 
-//        sheet.setHeaders(headers.stream().map(Row::new).collect(Collectors.toList()));
-
         excel.setSheets(Collections.singletonList(sheet));
 
         return newWriter(excel);

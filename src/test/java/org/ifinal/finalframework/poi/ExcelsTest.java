@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -38,23 +39,26 @@ class ExcelsTest {
     @Test
     void testJson() throws IOException {
 
-        InputStream is = getClass().getClassLoader().getResourceAsStream("excel.json");
+        Assertions.assertDoesNotThrow(() -> {
 
-        InputStreamReader reader = new InputStreamReader(is);
+            InputStream is = getClass().getClassLoader().getResourceAsStream("excel.json");
 
-        char[] buf = new char[1024 * 1024];
+            InputStreamReader reader = new InputStreamReader(is);
 
-        int length = reader.read(buf);
+            char[] buf = new char[1024 * 1024];
 
-        String json = new String(buf, 0, length);
+            int length = reader.read(buf);
 
-        ObjectMapper objectMapper = new ObjectMapper();
+            String json = new String(buf, 0, length);
 
-        Excel excel = objectMapper.readValue(json, Excel.class);
+            ObjectMapper objectMapper = new ObjectMapper();
 
-        Excels.newWriter(excel).append(persons())
-            .append(persons())
-            .write("test3.xlsx");
+            Excel excel = objectMapper.readValue(json, Excel.class);
+
+            Excels.newWriter(excel).append(persons())
+                .append(persons())
+                .write("test3.xlsx");
+        });
 
     }
 
