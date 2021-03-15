@@ -13,6 +13,11 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <final.version>1.1.3</final.version>
+
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.moduleKey>${project.artifactId}</sonar.moduleKey>
+        <sonar.organization>final-projects</sonar.organization>
+        <sonar.projectKey>${project.artifactId}</sonar.projectKey>
     </properties>
 
 
